@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    <%= title %>
+  </title>
+  <!-- Bootstrap -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="#">
+          <%= title %>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <form class="navbar-form navbar-right" onsubmit="return false;">
+          <!-- 入力エリアの開閉 -->
+          <button class="btn btn-link" id="open-signin-form">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </button>
+          <button class="btn btn-link" id="close-signin-form">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </button>
+          <div class="form-group">
+            <input type="text"
+              class="form-control"
+              id="username"
+              placeholder="username">
+            <input type="password"
+              class="form-control"
+              id="password"
+              placeholder="password">
+          </div>
+          <button class="btn btn-link" id="signin">signin</button>
+          <button class="btn btn-link" id="signout">signout</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <h1>セッション</h1>
+    <table class="table table-bordered" id="session-list">
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/base.js"></script>
+</body>
+
+</html>
